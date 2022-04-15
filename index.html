@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cong tac va bong den</title>
+
+</head>
+<body>
+<button onclick="bat()" >BAT</button>
+<button onclick="tat()" >TAT</button>
+<script>
+    class Electriclamp {
+        constructor() {
+            this.status = false;
+        }
+
+        turnOff() {
+            this.status = false;
+        }
+
+        turnOn() {
+            this.status = true;
+        }
+    }
+
+    class Switch {
+        constructor() {
+            this.status = false;
+        }
+        connect (lamp) {
+            lamp.status = this.status
+            return lamp.status
+        }
+        turnOn () {
+            this.status = true;
+        }
+        turnOff () {
+            this.status = false;
+        }
+    }
+
+    let bongDen = new Electriclamp();
+    let congTac = new Switch();
+    function bat() {
+        congTac.turnOn()
+
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
